@@ -121,9 +121,9 @@ header {
    Main Container - 使用 max() 实现响应式
    ============================================ */
 main {
-    max-width: 800px;
+    max-width: 900px;
     margin: 0 auto;
-    padding: var(--space-xl);
+    padding: var(--space-xl) var(--space-lg);
 }
 
 /* ============================================
@@ -180,10 +180,10 @@ main {
    Generator Card - 主生成器容器
    ============================================ */
 .generator {
-    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-light) 100%);
+    background: linear-gradient(145deg, var(--color-surface) 0%, var(--color-surface-light) 100%);
     border-radius: var(--radius-2xl);
-    padding: var(--space-xl);
-    box-shadow: var(--shadow-md), var(--shadow-glow);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-lg), var(--shadow-glow);
     border: 1px solid var(--color-border);
     position: relative;
     overflow: hidden;
@@ -364,9 +364,9 @@ main {
 .fields-grid {
     display: grid;
     /* 使用 min() 实现响应式列数 */
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: var(--space-md);
-    margin-bottom: var(--space-lg);
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
 }
 
 .field {
@@ -475,10 +475,10 @@ main {
    ============================================ */
 .info, .quick-links {
     margin-top: var(--space-2xl);
-    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-light) 100%);
+    background: linear-gradient(145deg, var(--color-surface) 0%, var(--color-surface-light) 100%);
     border-radius: var(--radius-2xl);
-    padding: var(--space-xl);
-    box-shadow: var(--shadow-md);
+    padding: var(--space-2xl);
+    box-shadow: var(--shadow-lg);
     border: 1px solid var(--color-border);
     position: relative;
     overflow: hidden;
@@ -499,8 +499,9 @@ main {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    margin: var(--space-lg) 0 var(--space-sm);
+    margin: var(--space-xl) 0 var(--space-md);
     font-weight: 700;
+    font-size: var(--font-lg);
 }
 
 .info h3:first-child {
@@ -534,17 +535,20 @@ main {
 }
 
 .quick-links h3 {
-    color: var(--color-text);
+    background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-accent-2) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
     font-weight: 700;
-    margin-bottom: var(--space-md);
+    margin-bottom: var(--space-lg);
     font-size: var(--font-xl);
 }
 
 .pages-nav {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
     gap: var(--space-md);
-    margin: var(--space-md) 0;
+    margin: var(--space-lg) 0;
 }
 
 .pages-nav a {
@@ -581,28 +585,36 @@ footer {
    Sub-pages Common Styles
    ============================================ */
 main h1 {
-    font-size: var(--font-xl);
-    color: #0f172a;
-    margin-bottom: var(--space-lg);
-    font-weight: 700;
+    font-size: clamp(1.75rem, 4vw, 2.5rem);
+    background: linear-gradient(135deg, #fff 0%, var(--color-primary) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-xl);
+    font-weight: 800;
     letter-spacing: -0.025em;
     padding-bottom: var(--space-md);
-    border-bottom: 2px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    text-shadow: 0 0 40px var(--color-primary-glow);
 }
 
 main h2 {
     font-size: var(--font-lg);
-    color: var(--color-text);
-    margin: var(--space-xl) 0 var(--space-md);
-    font-weight: 600;
+    color: var(--color-primary);
+    margin: var(--space-2xl) 0 var(--space-md);
+    font-weight: 700;
     display: flex;
     align-items: center;
     gap: var(--space-sm);
 }
 
+main h2:first-of-type {
+    margin-top: var(--space-xl);
+}
+
 main h3 {
     font-size: var(--font-base);
-    color: #334155;
+    color: var(--color-accent);
     margin: var(--space-lg) 0 var(--space-sm);
     font-weight: 600;
 }
@@ -697,16 +709,17 @@ main > a:hover {
 }
 
 main .highlight {
-    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
-    color: #fff;
-    padding: var(--space-lg) var(--space-lg);
-    border-radius: var(--radius-lg);
+    background: linear-gradient(135deg, var(--color-surface) 0%, var(--color-surface-light) 100%);
+    color: var(--color-text);
+    padding: var(--space-xl) var(--space-xl);
+    border-radius: var(--radius-xl);
     font-size: var(--font-lg);
-    margin: var(--space-lg) 0;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    margin: var(--space-xl) 0;
+    box-shadow: var(--shadow-md), var(--shadow-glow);
     display: flex;
     align-items: center;
-    gap: var(--space-md);
+    gap: var(--space-lg);
+    border: 1px solid var(--color-border);
 }
 
 main .highlight code {
@@ -720,15 +733,15 @@ main .highlight code {
 }
 
 main .examples {
-    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
-    border: 1px solid #bae6fd;
-    border-radius: var(--radius-lg);
-    padding: var(--space-lg);
-    margin: var(--space-lg) 0;
+    background: linear-gradient(135deg, rgba(0, 217, 255, 0.08) 0%, rgba(192, 132, 252, 0.08) 100%);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--space-xl);
+    margin: var(--space-xl) 0;
 }
 
 main .examples h3 {
-    color: #0369a1;
+    color: var(--color-primary);
     margin-top: 0;
 }
 
@@ -737,7 +750,7 @@ main .examples ul {
 }
 
 main .examples li {
-    color: #0c4a6e;
+    color: var(--color-text-light);
 }
 
 main .navigation {
