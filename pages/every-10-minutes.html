@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Every 10 Minutes - */10 Cron Expression Guide</title>
+    <meta name="description" content="Learn how to run cron jobs every 10 minutes using */10. Perfect for frequent updates, quick syncs, and near-real-time monitoring.">
+    <meta name="keywords" content="cron every 10 minutes, */10 * * * *, cron 10 minute interval">
+    <link rel="canonical" href="https://cron-generator.com/pages/every-10-minutes.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header><nav><a href="/" class="logo">Cron Generator</a></nav></header>
+    <main>
+        <h1>Cron Every 10 Minutes</h1>
+        <p class="highlight">Expression: <code>*/10 * * * *</code></p>
+        
+        <h2>How */10 Works</h2>
+        <p>The <code>*/10</code> runs at minutes: <strong>0, 10, 20, 30, 40, and 50</strong> of every hour.</p>
+        
+        <h2>Common Use Cases</h2>
+        <h3>🔔 Quick Monitoring</h3>
+        <ul>
+            <li><code>*/10 * * * * /scripts/check-api.sh</code> - Check API status every 10 min</li>
+            <li><code>*/10 * * * * /scripts/server-health.sh</code> - Quick server health check</li>
+        </ul>
+        
+        <h3>🔄 Fast Sync</h3>
+        <ul>
+            <li><code>*/10 * * * * /scripts/sync-quick.sh</code> - Quick data sync</li>
+            <li><code>*/10 * * * * /scripts/pull-notifications.sh</code> - Check for notifications</li>
+        </ul>
+        
+        <h3>📊 Frequent Updates</h3>
+        <ul>
+            <li><code>*/10 * * * * /scripts/update-prices.sh</code> - Update pricing data</li>
+            <li><code>*/10 * * * * /scripts/fetch-stock.sh</code> - Fetch stock prices</li>
+        </ul>
+        
+        <h2>Interval Comparison</h2>
+        <ul>
+            <li><code>*/5 * * * *</code> - Every 5 minutes (very frequent)</li>
+            <li><code>*/10 * * * *</code> - Every 10 minutes</li>
+            <li><code>*/15 * * * *</code> - Every 15 minutes</li>
+            <li><code>*/30 * * * *</code> - Every 30 minutes</li>
+        </ul>
+        
+        <div class="navigation">
+            <a href="/pages/every-5-minutes.html">← Every 5 Minutes</a>
+            <a href="/pages/every-15-minutes.html">Every 15 Minutes →</a>
+        </div>
+    </main>
+</body>
+</html>

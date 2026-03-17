@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Every 5 Minutes - */5 Cron Expression Guide</title>
+    <meta name="description" content="Learn how to run cron jobs every 5 minutes with */5. Examples for common use cases like monitoring, health checks, and data sync.">
+    <meta name="keywords" content="cron every 5 minutes, */5 * * * *, run cron every 5 minutes, cron interval 5 minutes">
+    <link rel="canonical" href="https://cron-generator.com/pages/every-5-minutes.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header><nav><a href="/" class="logo">Cron Generator</a></nav></header>
+    <main>
+        <h1>Run Cron Every 5 Minutes</h1>
+        <p class="highlight">Expression: <code>*/5 * * * *</code></p>
+        
+        <h2>How It Works</h2>
+        <p>The <code>*/5</code> means "every 5 minutes" - it runs at minutes 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, and 55.</p>
+        <h2>Real-World Examples</h2>
+        <h3>🔄 Monitoring & Health Checks</h3>
+        <ul>
+            <li><code>*/5 * * * * /scripts/health-check.sh</code> - Check server health every 5 minutes</li>
+            <li><code>*/5 * * * * curl -s https://api.example.com/health</code> - Monitor API endpoint</li>
+        </ul>
+        <h3>📊 Data Sync</h3>
+            <li><code>*/5 * * * * /scripts/sync-database.sh</code> - Sync database every 5 minutes</li>
+            <li><code>*/5 * * * * rsync -av /source/ /destination/</code> - Backup files periodically</li>
+        <h3>📧 Email & Notifications</h3>
+            <li><code>*/5 * * * * /scripts/check-alerts.sh</code> - Check and send alerts</li>
+            <li><code>*/5 * * * * /scripts/process-queue.sh</code> - Process email queue</li>
+        <h3>🧹 Cleanup Tasks</h3>
+            <li><code>*/5 * * * * find /tmp -type f -mmin +10 -delete</code> - Clean temp files older than 10 minutes</li>
+            <li><code>*/5 * * * * /scripts/clear-cache.sh</code> - Clear application cache</li>
+        <h2>Variations</h2>
+            <li><code>*/5 * * * *</code> - Every 5 minutes</li>
+            <li><code>*/10 * * * *</code> - Every 10 minutes</li>
+            <li><code>*/15 * * * *</code> - Every 15 minutes</li>
+            <li><code>*/30 * * * *</code> - Every 30 minutes</li>
+        <h2>Best Practices</h2>
+            <li>Don't run too frequently - every 5 minutes is usually the minimum needed</li>
+            <li>Consider system load when scheduling frequent jobs</li>
+            <li>Use logging to track job execution and diagnose issues</li>
+            <li>Set up alerts for job failures</li>
+        <div class="navigation">
+            <a href="/pages/every-minute.html">← Every Minute</a>
+            <a href="/pages/every-hour.html">Every Hour →</a>
+        </div>
+        
+        <div class="related-pages">
+            <h3>Related Pages</h3>
+            <div class="related-pages-list">
+                <a href="/pages/every-minute.html">Every Minute</a>
+                <a href="/pages/every-hour.html">Every Hour</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

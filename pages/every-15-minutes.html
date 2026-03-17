@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Every 15 Minutes - */15 Cron Expression Guide</title>
+    <meta name="description" content="Learn how to run cron jobs every 15 minutes using */15. Perfect for frequent updates, real-time dashboards, and monitoring tasks.">
+    <meta name="keywords" content="cron every 15 minutes, */15 * * * *, run cron every 15 minutes, cron interval">
+    <link rel="canonical" href="https://cron-generator.com/pages/every-15-minutes.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header><nav><a href="/" class="logo">Cron Generator</a></nav></header>
+    <main>
+        <h1>Cron Every 15 Minutes</h1>
+        <p class="highlight">Expression: <code>*/15 * * * *</code></p>
+        
+        <h2>How */15 Works</h2>
+        <p>The <code>*/15</code> runs at minutes: <strong>0, 15, 30, and 45</strong> of every hour.</p>
+        
+        <h2>Real-World Examples</h2>
+        <h3>📊 Real-Time Dashboards</h3>
+        <ul>
+            <li><code>*/15 * * * * /scripts/update-dashboard.py</code> - Refresh dashboard data</li>
+            <li><code>*/15 * * * * curl -s api.example.com/stats > /data/stats.json</code> - Fetch stats</li>
+        </ul>
+        
+        <h3>🔔 Monitoring & Alerts</h3>
+        <ul>
+            <li><code>*/15 * * * * /scripts/check-servers.sh</code> - Server health check</li>
+            <li><code>*/15 * * * * /scripts/monitor-api.sh</code> - API uptime monitoring</li>
+        </ul>
+        
+        <h3>🔄 Data Sync</h3>
+        <ul>
+            <li><code>*/15 * * * * /scripts/sync-inventory.sh</code> - Inventory sync</li>
+            <li><code>*/15 * * * * /scripts/pull-notifications.sh</code> - Check for new notifications</li>
+        </ul>
+        
+        <h3>📧 Email Processing</h3>
+        <ul>
+            <li><code>*/15 * * * * /scripts/process-emails.sh</code> - Check inbox every 15 min</li>
+        </ul>
+        
+        <h2>Interval Comparison</h2>
+        <ul>
+            <li><code>*/5 * * * *</code> - Every 5 minutes</li>
+            <li><code>*/10 * * * *</code> - Every 10 minutes</li>
+            <li><code>*/15 * * * *</code> - Every 15 minutes</li>
+            <li><code>*/30 * * * *</code> - Every 30 minutes</li>
+        </ul>
+        
+        <div class="navigation">
+            <a href="/pages/every-5-minutes.html">← Every 5 Minutes</a>
+            <a href="/pages/every-30-minutes.html">Every 30 Minutes →</a>
+        </div>
+    </main>
+</body>
+</html>

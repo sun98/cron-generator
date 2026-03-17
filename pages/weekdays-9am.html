@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Weekdays at 9 AM (0 9 * * 1-5) - Business Hours Guide</title>
+    <meta name="description" content="Learn how to run cron jobs on weekdays at 9 AM. Perfect for daily standups, business reports, and work-hour scheduled tasks.">
+    <meta name="keywords" content="cron weekdays 9am, 0 9 * * 1-5, cron business hours, cron monday to friday">
+    <link rel="canonical" href="https://cron-generator.com/pages/weekdays-9am.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header><nav><a href="/" class="logo">Cron Generator</a></nav></header>
+    <main>
+        <h1>Cron Weekdays at 9 AM</h1>
+        <p class="highlight">Expression: <code>0 9 * * 1-5</code></p>
+        
+        <h2>What Does 0 9 * * 1-5 Mean?</h2>
+        <ul>
+            <li><strong>0</strong> = Minute 0</li>
+            <li><strong>9</strong> = Hour 9 (9 AM)</li>
+            <li><strong>*</strong> = Every day of month</li>
+            <li><strong>*</strong> = Every month</li>
+            <li><strong>1-5</strong> = Monday to Friday (weekdays)</li>
+        </ul>
+        
+        <h2>Common Use Cases</h2>
+        <h3>📋 Daily Standup Reminders</h3>
+        <ul>
+            <li><code>0 9 * * 1-5 /scripts/slack-standup.sh</code> - Send standup reminder to Slack</li>
+            <li><code>0 9 * * 1-5 /scripts/email-standup.sh</code> - Email standup questions</li>
+        </ul>
+        
+        <h3>📊 Morning Reports</h3>
+        <ul>
+            <li><code>0 9 * * 1-5 /scripts/daily-sales-report.sh</code> - Generate daily sales report</li>
+            <li><code>0 9 * * 1-5 /scripts/morning-dashboard.sh</code> - Refresh morning dashboard</li>
+        </ul>
+        
+        <h3>🔄 Daily Sync</h3>
+        <ul>
+            <li><code>0 9 * * 1-5 /scripts/sync-external.sh</code> - Sync with external systems</li>
+            <li><code>0 9 * * 1-5 /scripts/update-inventory.sh</code> - Update inventory levels</li>
+        </ul>
+        
+        <h3>🔔 Notifications</h3>
+        <ul>
+            <li><code>0 9 * * 1-5 /scripts/daily-digest.sh</code> - Send daily digest email</li>
+        </ul>
+        
+        <h2>Business Hours Variations</h2>
+        <ul>
+            <li><code>0 9 * * 1-5</code> - Weekdays at 9 AM</li>
+            <li><code>0 10 * * 1-5</code> - Weekdays at 10 AM</li>
+            <li><code>30 9 * * 1-5</code> - Weekdays at 9:30 AM</li>
+            <li><code>0 17 * * 1-5</code> - Weekdays at 5 PM (end of day)</li>
+        </ul>
+        
+        <div class="navigation">
+            <a href="/pages/cron-9-am.html">← Cron 9 AM Daily</a>
+            <a href="/pages/every-week.html">Weekday Guide →</a>
+        </div>
+    </main>
+</body>
+</html>

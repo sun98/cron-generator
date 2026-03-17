@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Every Day at Midnight (0 0 * * *) - Daily Cron Job Guide</title>
+    <meta name="description" content="Learn how to run cron jobs every day at midnight using '0 0 * * *'. Perfect for daily backups, cleanup tasks, and scheduled reports.">
+    <meta name="keywords" content="cron every day at midnight, 0 0 * * *, cron daily at midnight, cron job daily backup">
+    <link rel="canonical" href="https://cron-generator.com/pages/cron-midnight.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header><nav><a href="/" class="logo">Cron Generator</a></nav></header>
+    <main>
+        <h1>Cron Every Day at Midnight</h1>
+        <p class="highlight">Expression: <code>0 0 * * *</code></p>
+        
+        <h2>What Does 0 0 * * * Mean?</h2>
+        <ul>
+            <li><strong>0</strong> = Minute 0</li>
+            <li><strong>0</strong> = Hour 0 (midnight)</li>
+            <li><strong>*</strong> = Every day of month</li>
+            <li><strong>*</strong> = Every month</li>
+            <li><strong>*</strong> = Every day of week</li>
+        </ul>
+        
+        <h2>Common Use Cases</h2>
+        <h3>💾 Daily Backups</h3>
+        <ul>
+            <li><code>0 0 * * * /scripts/backup-db.sh</code> - Database backup at midnight</li>
+            <li><code>0 0 * * * rsync -av /data /backup/</code> - File backup daily</li>
+        </ul>
+        
+        <h3>🧹 Cleanup Tasks</h3>
+        <ul>
+            <li><code>0 0 * * * find /tmp -type f -mtime +7 -delete</code> - Clean old temp files</li>
+            <li><code>0 0 * * * /scripts/clear-logs.sh</code> - Rotate log files daily</li>
+        </ul>
+        
+        <h3>📊 Daily Reports</h3>
+        <ul>
+            <li><code>0 0 * * * /scripts/daily-report.sh</code> - Generate daily analytics</li>
+            <li><code>0 0 * * * python /scripts/analyze.py</code> - Run daily data analysis</li>
+        </ul>
+        
+        <h3>🔄 Data Sync</h3>
+        <ul>
+            <li><code>0 0 * * * /scripts/sync-users.sh</code> - Sync user data overnight</li>
+        </ul>
+        
+        <h2>Variations</h2>
+        <ul>
+            <li><code>0 0 * * *</code> - Every day at midnight</li>
+            <li><code>0 1 * * *</code> - Every day at 1 AM</li>
+            <li><code>0 2 * * *</code> - Every day at 2 AM (recommended for backups)</li>
+        </ul>
+        
+        <div class="navigation">
+            <a href="/pages/every-day.html">← Every Day</a>
+            <a href="/pages/cron-9-am.html">Cron 9 AM →</a>
+        </div>
+    </main>
+</body>
+</html>

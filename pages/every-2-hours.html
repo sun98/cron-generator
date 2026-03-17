@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Every 2 Hours - */2 Cron Expression Guide</title>
+    <meta name="description" content="Learn how to run cron jobs every 2 hours using */2 or 0 */2 * * *. Perfect for periodic updates, regular syncs, and scheduled maintenance.">
+    <meta name="keywords" content="cron every 2 hours, */2 * * * *, 0 */2 * * *, cron 2 hour interval">
+    <link rel="canonical" href="https://cron-generator.com/pages/every-2-hours.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header><nav><a href="/" class="logo">Cron Generator</a></nav></header>
+    <main>
+        <h1>Cron Every 2 Hours</h1>
+        <p class="highlight">Expression: <code>0 */2 * * *</code></p>
+        
+        <h2>How 0 */2 * * * Works</h2>
+        <p>This runs at <strong>hour 0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22</strong> at minute 0.</p>
+        
+        <h2>Common Use Cases</h2>
+        <h3>🔄 Regular Sync</h3>
+        <ul>
+            <li><code>0 */2 * * * /scripts/sync-data.sh</code> - Sync data every 2 hours</li>
+            <li><code>0 */2 * * * /scripts/pull-updates.sh</code> - Pull updates from external API</li>
+        </ul>
+        
+        <h3>📊 Periodic Reports</h3>
+        <ul>
+            <li><code>0 */2 * * * /scripts/hourly-metrics.sh</code> - Generate metrics every 2 hours</li>
+            <li><code>0 */2 * * * /scripts/update-dashboard.sh</code> - Update dashboard</li>
+        </ul>
+        
+        <h3>🧹 Maintenance</h3>
+        <ul>
+            <li><code>0 */2 * * * /scripts/cleanup-temp.sh</code> - Clean temp files</li>
+            <li><code>0 */2 * * * /scripts/check-disk.sh</code> - Check disk space</li>
+        </ul>
+        
+        <h3>🔔 Status Updates</h3>
+        <ul>
+            <li><code>0 */2 * * * /scripts/update-status.sh</code> - Update system status</li>
+        </ul>
+        
+        <h2>Hourly Variations</h2>
+        <ul>
+            <li><code>0 * * * *</code> - Every hour</li>
+            <li><code>0 */2 * * *</code> - Every 2 hours</li>
+            <li><code>0 */4 * * *</code> - Every 4 hours</li>
+            <li><code>0 */6 * * *</code> - Every 6 hours</li>
+            <li><code>0 */12 * * *</code> - Every 12 hours</li>
+        </ul>
+        
+        <div class="navigation">
+            <a href="/pages/every-hour.html">← Every Hour</a>
+            <a href="/pages/every-4-hours.html">Every 4 Hours →</a>
+        </div>
+    </main>
+</body>
+</html>

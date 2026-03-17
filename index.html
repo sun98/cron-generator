@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Expression Generator - Free Online Cron Job Scheduler</title>
+    <meta name="description" content="Free online cron expression generator and validator. Create valid cron jobs with visual interface. Supports minute, hourly, daily, weekly, monthly schedules. Preview next execution times instantly. Perfect for developers and system administrators.">
+    <meta name="keywords" content="cron expression, cron generator, cron job, crontab, cron scheduler, online cron, cron builder, cron validator, cron examples, cron syntax">
+    <link rel="canonical" href="https://cron-generator.com/">
+    <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Cron Expression Generator",
+        "description": "Free online cron expression generator with visual interface",
+        "url": "https://cron-generator.com/",
+        "applicationCategory": "DeveloperTools",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [{
+            "@type": "Question",
+            "name": "What is a cron expression?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A cron expression is a string of 5 fields separated by spaces that represents a schedule. Each field specifies a time component: minute (0-59), hour (0-23), day of month (1-31), month (1-12), and day of week (0-6)."
+            }
+        }, {
+            "@type": "Question",
+            "name": "How do I run a cron job every 5 minutes?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use */5 * * * * as your cron expression. This runs at minutes 0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, and 55 of every hour."
+            }
+        }, {
+            "@type": "Question",
+            "name": "How do I run a cron job daily at midnight?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Use 0 0 * * * as your cron expression. This runs at minute 0, hour 0 (midnight), every day of every month."
+            }
+        }, {
+            "@type": "Question",
+            "name": "What does * * * * * mean in cron?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "* * * * * means 'every minute'. Each asterisk represents: minute *, hour *, day of month *, month *, day of week *."
+            }
+        }]
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="/" class="logo">Cron Generator</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Cron Expression Generator</h1>
+            <h2>Generate Valid Cron Expressions in Seconds</h2>
+            <p>Free online tool to create and validate cron job schedules. Supports standard 5-field cron format.</p>
+        </section>
+
+        <section class="generator">
+            <div class="field">
+                <label for="minute">Minute (0-59)</label>
+                <select id="minute">
+                    <option value="*">Every minute (*)</option>
+                    <option value="0">At minute 0</option>
+                    <option value="*/5">Every 5 minutes (*/5)</option>
+                    <option value="*/10">Every 10 minutes (*/10)</option>
+                    <option value="*/15">Every 15 minutes (*/15)</option>
+                    <option value="*/30">Every 30 minutes (*/30)</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="hour">Hour (0-23)</label>
+                <select id="hour">
+                    <option value="*">Every hour (*)</option>
+                    <option value="0">At midnight (0)</option>
+                    <option value="9">At 9 AM</option>
+                    <option value="12">At noon (12)</option>
+                    <option value="18">At 6 PM (18)</option>
+                    <option value="*/2">Every 2 hours (*/2)</option>
+                    <option value="*/4">Every 4 hours (*/4)</option>
+                    <option value="*/6">Every 6 hours (*/6)</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="day">Day of Month (1-31)</label>
+                <select id="day">
+                    <option value="*">Every day (*)</option>
+                    <option value="1">1st of month</option>
+                    <option value="15">15th of month</option>
+                    <option value="1,15">1st and 15th</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="month">Month (1-12)</label>
+                <select id="month">
+                    <option value="*">Every month (*)</option>
+                    <option value="1">January</option>
+                    <option value="6">June</option>
+                    <option value="12">December</option>
+                    <option value="1,4,7,10">Quarterly (1,4,7,10)</option>
+                </select>
+            </div>
+
+            <div class="field">
+                <label for="weekday">Day of Week (0-6)</label>
+                <select id="weekday">
+                    <option value="*">Every weekday (*)</option>
+                    <option value="0">Sunday</option>
+                    <option value="1">Monday</option>
+                    <option value="2">Tuesday</option>
+                    <option value="3">Wednesday</option>
+                    <option value="4">Thursday</option>
+                    <option value="5">Friday</option>
+                    <option value="6">Saturday</option>
+                    <option value="1-5">Weekdays (Mon-Fri)</option>
+                    <option value="0,6">Weekends (Sat-Sun)</option>
+                </select>
+            </div>
+
+            <div class="result">
+                <label>Generated Cron Expression:</label>
+                <div class="cron-output" id="cron-output">* * * * *</div>
+                <button id="copy-btn">Copy to Clipboard</button>
+            </div>
+
+            <div class="next-run">
+                <label>Next 5 Execution Times:</label>
+                <ul id="next-runs"></ul>
+            </div>
+        </section>
+
+        <section class="quick-links">
+            <h3>Popular Cron Expressions</h3>
+            <div class="pages-nav">
+                <a href="/pages/every-minute.html">Every Minute</a>
+                <a href="/pages/every-5-minutes.html">Every 5 Minutes</a>
+                <a href="/pages/every-10-minutes.html">Every 10 Minutes</a>
+                <a href="/pages/every-15-minutes.html">Every 15 Minutes</a>
+                <a href="/pages/every-30-minutes.html">Every 30 Minutes</a>
+                <a href="/pages/every-hour.html">Every Hour</a>
+                <a href="/pages/every-2-hours.html">Every 2 Hours</a>
+                <a href="/pages/cron-midnight.html">Midnight Daily</a>
+                <a href="/pages/cron-noon.html">Noon Daily</a>
+                <a href="/pages/cron-9-am.html">9 AM Daily</a>
+                <a href="/pages/weekdays-9am.html">Weekdays at 9 AM</a>
+                <a href="/pages/every-sunday.html">Every Sunday</a>
+                <a href="/pages/first-of-month.html">1st of Month</a>
+                <a href="/pages/cron-expression-format.html">Format Guide</a>
+                <a href="/pages/crontab-syntax.html">Crontab Syntax</a>
+                <a href="/pages/cron-not-working.html">Troubleshooting</a>
+            </div>
+        </section>
+
+        <section class="info">
+            <h3>What is Cron?</h3>
+            <p>Cron is a time-based job scheduler in Unix-like operating systems. Users can schedule jobs to run periodically at specific times, dates, or intervals. It's commonly used for automated backups, monitoring, report generation, and system maintenance.</p>
+            
+            <h3>Cron Expression Format</h3>
+            <p>A cron expression consists of 5 fields separated by spaces:</p>
+            <ul>
+                <li><strong>Minute</strong> (0-59) - The minute of the hour</li>
+                <li><strong>Hour</strong> (0-23) - The hour of the day (0 = midnight)</li>
+                <li><strong>Day of Month</strong> (1-31) - The day of the month</li>
+                <li><strong>Month</strong> (1-12) - The month of the year</li>
+                <li><strong>Day of Week</strong> (0-6) - The day of the week (0 = Sunday)</li>
+            </ul>
+
+            <h3>Special Characters</h3>
+            <ul>
+                <li><strong>*</strong> - Any value</li>
+                <li><strong>,</strong> - Value list separator (e.g., 1,3,5)</li>
+                <li><strong>-</strong> - Range of values (e.g., 1-5)</li>
+                <li><strong>/</strong> - Step values (e.g., */15 = every 15)</li>
+            </ul>
+
+            <h3>Common Cron Expressions</h3>
+            <ul>
+                <li><code>* * * * *</code> - <a href="/pages/every-minute.html">Every minute</a></li>
+                <li><code>*/5 * * * *</code> - <a href="/pages/every-5-minutes.html">Every 5 minutes</a></li>
+                <li><code>0 * * * *</code> - <a href="/pages/every-hour.html">Every hour</a></li>
+                <li><code>0 0 * * *</code> - <a href="/pages/cron-midnight.html">Every day at midnight</a></li>
+                <li><code>0 9 * * *</code> - <a href="/pages/cron-9-am.html">Every day at 9 AM</a></li>
+                <li><code>0 0 * * 0</code> - <a href="/pages/every-sunday.html">Every Sunday</a></li>
+                <li><code>0 0 1 * *</code> - <a href="/pages/first-of-month.html">First day of every month</a></li>
+                <li><code>0 9 * * 1-5</code> - <a href="/pages/weekdays-9am.html">Weekdays at 9 AM</a></li>
+            </ul>
+
+            <h3>Troubleshooting</h3>
+            <p>If your cron job is not working, check our <a href="/pages/cron-not-working.html">common cron problems and solutions</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Cron Generator. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

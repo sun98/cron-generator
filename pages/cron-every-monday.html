@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Every Monday - Weekly Monday Job Schedule</title>
+    <meta name="description" content="Schedule cron jobs to run every Monday. Perfect for weekly reports, Monday reminders, and start-of-week tasks.">
+    <meta name="keywords" content="cron every monday, cron 0 9 * * 1, monday cron job, weekly cron monday">
+    <link rel="canonical" href="https://cron-generator.com/pages/cron-every-monday.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header><nav><a href="/" class="logo">Cron Generator</a></nav></header>
+    <main>
+        <h1>Cron Job Every Monday</h1>
+        <p class="highlight">Expression: <code>0 9 * * 1</code></p>
+        
+        <h2>Understanding Monday Cron</h2>
+        <p>In cron, days of week are numbered 0-6 where <strong>0 = Sunday</strong> and <strong>1 = Monday</strong>.</p>
+        <ul>
+            <li><code>0 9 * * 1</code> - At 9 AM every Monday</li>
+            <li><code>0 0 * * 1</code> - At midnight every Monday</li>
+            <li><code>0 18 * * 1</code> - At 6 PM every Monday</li>
+        </ul>
+        <h2>Common Monday Jobs</h2>
+        <h3>📊 Weekly Reports</h3>
+            <li><code>0 9 * * 1 /scripts/weekly-report.sh</code> - Generate weekly performance report</li>
+            <li><code>0 9 * * 1 /scripts/sales-summary.sh</code> - Send weekly sales summary</li>
+            <li><code>0 9 * * 1 python /scripts/analytics.py --week</code> - Weekly analytics</li>
+        <h3>🔄 Week Start Tasks</h3>
+            <li><code>0 8 * * 1 /scripts/clear-weekend-logs.sh</code> - Clean up weekend logs</li>
+            <li><code>0 9 * * 1 /scripts/restart-services.sh</code> - Restart services for new week</li>
+            <li><code>0 9 * * 1 /scripts/check-pending.sh</code> - Review pending items from last week</li>
+        <h3>📧 Monday Reminders</h3>
+            <li><code>0 9 * * 1 /scripts/standup-reminder.sh</code> - Send standup meeting reminder</li>
+            <li><code>0 10 * * 1 /scripts/team-update.sh</code> - Send weekly team update template</li>
+        <h3>💾 Weekly Backups</h3>
+            <li><code>0 2 * * 1 /scripts/weekly-full-backup.sh</code> - Full system backup</li>
+            <li><code>0 3 * * 1 /scripts/rotate-weekly-backups.sh</code> - Rotate weekly backups</li>
+        <h2>Other Weekdays</h2>
+            <li><code>0 9 * * 2</code> - Every Tuesday</li>
+            <li><code>0 9 * * 3</code> - Every Wednesday</li>
+            <li><code>0 9 * * 4</code> - Every Thursday</li>
+            <li><code>0 9 * * 5</code> - Every Friday</li>
+        <h2>Business Days Only</h2>
+        <p>Run only on weekdays (Monday-Friday):</p>
+            <li><code>0 9 * * 1-5</code> - Every weekday at 9 AM</li>
+            <li><code>0 9 * * 1,2,3,4,5</code> - Same as above</li>
+        <div class="navigation">
+            <a href="/pages/every-week.html">← Back to Weekly Jobs</a>
+            <a href="/pages/cron-weekdays.html">Weekday Jobs →</a>
+        </div>
+        
+        <div class="related-pages">
+            <h3>Related Pages</h3>
+            <div class="related-pages-list">
+                <a href="/pages/every-week.html">Every Week</a>
+            </div>
+        </div>
+    </main>
+</body>
+</html>

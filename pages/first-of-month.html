@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron First of Month (0 0 1 * *) - Monthly Cron Job Guide</title>
+    <meta name="description" content="Learn how to run cron jobs on the first day of every month. Perfect for monthly billing, reports, and scheduled maintenance.">
+    <meta name="keywords" content="cron first of month, 0 0 1 * *, cron monthly on 1st, cron job first day month">
+    <link rel="canonical" href="https://cron-generator.com/pages/first-of-month.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header><nav><a href="/" class="logo">Cron Generator</a></nav></header>
+    <main>
+        <h1>Cron First of Every Month</h1>
+        <p class="highlight">Expression: <code>0 0 1 * *</code></p>
+        
+        <h2>What Does 0 0 1 * * Mean?</h2>
+        <ul>
+            <li><strong>0</strong> = Minute 0</li>
+            <li><strong>0</strong> = Hour 0 (midnight)</li>
+            <li><strong>1</strong> = 1st day of month</li>
+            <li><strong>*</strong> = Every month</li>
+            <li><strong>*</strong> = Every day of week</li>
+        </ul>
+        
+        <h2>Common Use Cases</h2>
+        <h3>💰 Billing & Invoicing</h3>
+        <ul>
+            <li><code>0 0 1 * * /scripts/generate-invoices.sh</code> - Generate monthly invoices</li>
+            <li><code>0 8 1 * * /scripts/charge-subscriptions.sh</code> - Process subscriptions at 8 AM</li>
+        </ul>
+        
+        <h3>📊 Monthly Reports</h3>
+        <ul>
+            <li><code>0 0 1 * * /scripts/monthly-report.sh</code> - Generate monthly analytics</li>
+            <li><code>0 6 1 * * /scripts/send-monthly-summary.sh</code> - Send monthly summary</li>
+        </ul>
+        
+        <h3>💾 Monthly Backups</h3>
+        <ul>
+            <li><code>0 2 1 * * /scripts/monthly-full-backup.sh</code> - Full monthly backup</li>
+            <li><code>0 3 1 * * /scripts/archive-logs.sh</code> - Archive monthly logs</li>
+        </ul>
+        
+        <h3>🧹 Maintenance</h3>
+        <ul>
+            <li><code>0 4 1 * * /scripts/cleanup-old-data.sh</code> - Clean old data monthly</li>
+        </ul>
+        
+        <h2>Other Monthly Options</h2>
+        <ul>
+            <li><code>0 0 1 * *</code> - 1st of every month</li>
+            <li><code>0 0 15 * *</code> - 15th of every month</li>
+            <li><code>0 0 1,15 * *</code> - 1st and 15th of every month</li>
+            <li><code>0 0 1 * *</code> - Last day of month (use with care)</li>
+        </ul>
+        
+        <div class="navigation">
+            <a href="/pages/every-month.html">← Every Month</a>
+            <a href="/pages/first-of-month.html">First of Month</a>
+        </div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cron Every 30 Minutes - */30 Cron Expression Guide</title>
+    <meta name="description" content="Learn how to run cron jobs every 30 minutes using */30. Ideal for less frequent updates, periodic syncs, and scheduled checks.">
+    <meta name="keywords" content="cron every 30 minutes, */30 * * * *, cron half hour, cron interval">
+    <link rel="canonical" href="https://cron-generator.com/pages/every-30-minutes.html">
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <header><nav><a href="/" class="logo">Cron Generator</a></nav></header>
+    <main>
+        <h1>Cron Every 30 Minutes</h1>
+        <p class="highlight">Expression: <code>*/30 * * * *</code></p>
+        
+        <h2>How */30 Works</h2>
+        <p>The <code>*/30</code> runs at minutes: <strong>0 and 30</strong> of every hour.</p>
+        
+        <h2>Common Use Cases</h2>
+        <h3>🔄 Periodic Sync</h3>
+        <ul>
+            <li><code>*/30 * * * * /scripts/sync-data.sh</code> - Sync data every 30 minutes</li>
+            <li><code>*/30 * * * * /scripts/pull-updates.sh</code> - Pull updates from external APIs</li>
+        </ul>
+        
+        <h3>📊 Reports & Analytics</h3>
+        <ul>
+            <li><code>*/30 * * * * /scripts/generate-metrics.sh</code> - Generate metrics every 30 min</li>
+        </ul>
+        
+        <h3>🧹 Maintenance</h3>
+        <ul>
+            <li><code>*/30 * * * * /scripts/optimize-db.sh</code> - Database optimization</li>
+            <li><code>*/30 * * * * /scripts/cleanup-temp.sh</code> - Clean temporary files</li>
+        </ul>
+        
+        <h2>When to Use 30 Minutes?</h2>
+        <p>Every 30 minutes is ideal when:</p>
+        <ul>
+            <li>Real-time isn't required but hourly is too slow</li>
+            <li>You want to balance server load with freshness</li>
+            <li>External API rate limits prevent more frequent calls</li>
+        </ul>
+        
+        <h2>Interval Options</h2>
+        <ul>
+            <li><code>*/5 * * * *</code> - Every 5 minutes</li>
+            <li><code>*/10 * * * *</code> - Every 10 minutes</li>
+            <li><code>*/15 * * * *</code> - Every 15 minutes</li>
+            <li><code>*/30 * * * *</code> - Every 30 minutes</li>
+        </ul>
+        
+        <div class="navigation">
+            <a href="/pages/every-15-minutes.html">← Every 15 Minutes</a>
+            <a href="/pages/every-hour.html">Every Hour →</a>
+        </div>
+    </main>
+</body>
+</html>
