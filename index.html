@@ -7,6 +7,9 @@
     <meta name="description" content="Free online cron expression generator and validator. Create valid cron jobs with visual interface. Supports minute, hourly, daily, weekly, monthly schedules. Preview next execution times instantly. Perfect for developers and system administrators.">
     <meta name="keywords" content="cron expression, cron generator, cron job, crontab, cron scheduler, online cron, cron builder, cron validator, cron examples, cron syntax">
     <link rel="canonical" href="https://cron-generator.com/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
     {
@@ -62,7 +65,7 @@
 <body>
     <header>
         <nav>
-            <a href="/" class="logo">Cron Generator</a>
+            <a href="index.html" class="logo">Cron Generator</a>
         </nav>
     </header>
 
@@ -74,6 +77,19 @@
         </section>
 
         <section class="generator">
+            <div class="quick-presets">
+                <span class="preset-label">Quick Presets:</span>
+                <button type="button" class="preset-btn" data-cron="* * * * *" aria-label="Load preset: every minute">Every Min</button>
+                <button type="button" class="preset-btn" data-cron="*/5 * * * *" aria-label="Load preset: every 5 minutes">Every 5 Min</button>
+                <button type="button" class="preset-btn" data-cron="*/15 * * * *" aria-label="Load preset: every 15 minutes">Every 15 Min</button>
+                <button type="button" class="preset-btn" data-cron="0 * * * *" aria-label="Load preset: every hour at minute 0">Every Hour</button>
+                <button type="button" class="preset-btn" data-cron="0 0 * * *" aria-label="Load preset: daily at midnight">Daily Midnight</button>
+                <button type="button" class="preset-btn" data-cron="0 9 * * 1-5" aria-label="Load preset: weekdays at 9 AM">Weekdays 9AM</button>
+                <button type="button" class="preset-btn" data-cron="0 0 * * 0" aria-label="Load preset: every Sunday at midnight">Weekly Sunday</button>
+                <button type="button" class="preset-btn" data-cron="0 0 1 * *" aria-label="Load preset: first day of month at midnight">Monthly 1st</button>
+            </div>
+
+            <div class="fields-grid">
             <div class="field">
                 <label for="minute">Minute (0-59)</label>
                 <select id="minute">
@@ -124,7 +140,7 @@
             <div class="field">
                 <label for="weekday">Day of Week (0-6)</label>
                 <select id="weekday">
-                    <option value="*">Every weekday (*)</option>
+                    <option value="*">Any day of week (*)</option>
                     <option value="0">Sunday</option>
                     <option value="1">Monday</option>
                     <option value="2">Tuesday</option>
@@ -136,11 +152,12 @@
                     <option value="0,6">Weekends (Sat-Sun)</option>
                 </select>
             </div>
+            </div>
 
             <div class="result">
                 <label>Generated Cron Expression:</label>
                 <div class="cron-output" id="cron-output">* * * * *</div>
-                <button id="copy-btn">Copy to Clipboard</button>
+                <button type="button" id="copy-btn" aria-label="Copy cron expression to clipboard">Copy to Clipboard</button>
             </div>
 
             <div class="next-run">
@@ -152,22 +169,27 @@
         <section class="quick-links">
             <h3>Popular Cron Expressions</h3>
             <div class="pages-nav">
-                <a href="/pages/every-minute.html">Every Minute</a>
-                <a href="/pages/every-5-minutes.html">Every 5 Minutes</a>
-                <a href="/pages/every-10-minutes.html">Every 10 Minutes</a>
-                <a href="/pages/every-15-minutes.html">Every 15 Minutes</a>
-                <a href="/pages/every-30-minutes.html">Every 30 Minutes</a>
-                <a href="/pages/every-hour.html">Every Hour</a>
-                <a href="/pages/every-2-hours.html">Every 2 Hours</a>
-                <a href="/pages/cron-midnight.html">Midnight Daily</a>
-                <a href="/pages/cron-noon.html">Noon Daily</a>
-                <a href="/pages/cron-9-am.html">9 AM Daily</a>
-                <a href="/pages/weekdays-9am.html">Weekdays at 9 AM</a>
-                <a href="/pages/every-sunday.html">Every Sunday</a>
-                <a href="/pages/first-of-month.html">1st of Month</a>
-                <a href="/pages/cron-expression-format.html">Format Guide</a>
-                <a href="/pages/crontab-syntax.html">Crontab Syntax</a>
-                <a href="/pages/cron-not-working.html">Troubleshooting</a>
+                <a href="pages/every-minute.html">Every Minute</a>
+                <a href="pages/every-5-minutes.html">Every 5 Minutes</a>
+                <a href="pages/every-10-minutes.html">Every 10 Minutes</a>
+                <a href="pages/every-15-minutes.html">Every 15 Minutes</a>
+                <a href="pages/every-30-minutes.html">Every 30 Minutes</a>
+                <a href="pages/every-hour.html">Every Hour</a>
+                <a href="pages/every-2-hours.html">Every 2 Hours</a>
+                <a href="pages/cron-midnight.html">Midnight Daily</a>
+                <a href="pages/cron-noon.html">Noon Daily</a>
+                <a href="pages/cron-9-am.html">9 AM Daily</a>
+                <a href="pages/weekdays-9am.html">Weekdays at 9 AM</a>
+                <a href="pages/every-sunday.html">Every Sunday</a>
+                <a href="pages/every-day.html">Every Day</a>
+                <a href="pages/every-week.html">Every Week</a>
+                <a href="pages/every-month.html">Every Month</a>
+                <a href="pages/cron-every-monday.html">Every Monday</a>
+                <a href="pages/first-of-month.html">1st of Month</a>
+                <a href="pages/cron-job-examples.html">Cron Examples</a>
+                <a href="pages/cron-expression-format.html">Format Guide</a>
+                <a href="pages/crontab-syntax.html">Crontab Syntax</a>
+                <a href="pages/cron-not-working.html">Troubleshooting</a>
             </div>
         </section>
 
@@ -195,18 +217,18 @@
 
             <h3>Common Cron Expressions</h3>
             <ul>
-                <li><code>* * * * *</code> - <a href="/pages/every-minute.html">Every minute</a></li>
-                <li><code>*/5 * * * *</code> - <a href="/pages/every-5-minutes.html">Every 5 minutes</a></li>
-                <li><code>0 * * * *</code> - <a href="/pages/every-hour.html">Every hour</a></li>
-                <li><code>0 0 * * *</code> - <a href="/pages/cron-midnight.html">Every day at midnight</a></li>
-                <li><code>0 9 * * *</code> - <a href="/pages/cron-9-am.html">Every day at 9 AM</a></li>
-                <li><code>0 0 * * 0</code> - <a href="/pages/every-sunday.html">Every Sunday</a></li>
-                <li><code>0 0 1 * *</code> - <a href="/pages/first-of-month.html">First day of every month</a></li>
-                <li><code>0 9 * * 1-5</code> - <a href="/pages/weekdays-9am.html">Weekdays at 9 AM</a></li>
+                <li><code>* * * * *</code> - <a href="pages/every-minute.html">Every minute</a></li>
+                <li><code>*/5 * * * *</code> - <a href="pages/every-5-minutes.html">Every 5 minutes</a></li>
+                <li><code>0 * * * *</code> - <a href="pages/every-hour.html">Every hour</a></li>
+                <li><code>0 0 * * *</code> - <a href="pages/cron-midnight.html">Every day at midnight</a></li>
+                <li><code>0 9 * * *</code> - <a href="pages/cron-9-am.html">Every day at 9 AM</a></li>
+                <li><code>0 0 * * 0</code> - <a href="pages/every-sunday.html">Every Sunday</a></li>
+                <li><code>0 0 1 * *</code> - <a href="pages/first-of-month.html">First day of every month</a></li>
+                <li><code>0 9 * * 1-5</code> - <a href="pages/weekdays-9am.html">Weekdays at 9 AM</a></li>
             </ul>
 
             <h3>Troubleshooting</h3>
-            <p>If your cron job is not working, check our <a href="/pages/cron-not-working.html">common cron problems and solutions</a>.</p>
+            <p>If your cron job is not working, check our <a href="pages/cron-not-working.html">common cron problems and solutions</a>.</p>
         </section>
     </main>
 

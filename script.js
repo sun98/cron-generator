@@ -46,7 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
         date.setSeconds(0);
         date.setMilliseconds(0);
 
-        // Simple implementation for common cases
         const mins = parseField(minute, 0, 59);
         const hours = parseField(hour, 0, 23);
         const days = parseField(day, 1, 31);
@@ -60,32 +59,50 @@ document.addEventListener('DOMContentLoaded', function() {
             const h = date.getHours();
             const min = date.getMinutes();
 
-            if (months.includes(m) && days.includes(d) && weekdays.includes(wd)) {
-                if (hour === '*') {
-                    if (minute === '*') {
-                        return date;
-                    } else if (mins.includes(min)) {
-                        return date;
-                    }
-                    // Try each minute
-                    if (minute.includes('/')) {
-                        const step = parseInt(minute.split('/')[1]);
-                        if (min % step === 0) return date;
-                    }
-                } else if (hours.includes(h)) {
-                    if (minute === '*') {
-                        return date;
-                    } else if (mins.includes(min)) {
-                        return date;
-                    }
-                    if (minute.includes('/')) {
-                        const step = parseInt(minute.split('/')[1]);
-                        if (min % step === 0) return date;
-                    }
-                }
+            // Check date constraints
+            if (!months.includes(m)) {
+                date.setMonth(date.getMonth() + 1);
+                date.setDate(1);
+                date.setHours(0, 0, 0, 0);
+                continue;
+            }
+            if (!days.includes(d)) {
+                date.setDate(date.getDate() + 1);
+                date.setHours(0, 0, 0, 0);
+                continue;
+            }
+            if (!weekdays.includes(wd)) {
+                date.setDate(date.getDate() + 1);
+                date.setHours(0, 0, 0, 0);
+                continue;
             }
 
-            date.setMinutes(date.getMinutes() + 1);
+            // Check hour constraint
+            if (!hours.includes(h)) {
+                // Jump to next valid hour
+                const nextHourIdx = hours.findIndex(hh => hh > h);
+                if (nextHourIdx === -1) {
+                    date.setDate(date.getDate() + 1);
+                    date.setHours(0, 0, 0, 0);
+                } else {
+                    date.setHours(hours[nextHourIdx], 0, 0, 0);
+                }
+                continue;
+            }
+
+            // Check minute constraint
+            if (!mins.includes(min)) {
+                const nextMinIdx = mins.findIndex(mm => mm > min);
+                if (nextMinIdx === -1) {
+                    // Move to next hour
+                    date.setHours(date.getHours() + 1, 0, 0, 0);
+                } else {
+                    date.setMinutes(mins[nextMinIdx], 0, 0);
+                }
+                continue;
+            }
+
+            return date;
         }
 
         return null;
@@ -146,54 +163,51 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Copy button - 直接用 fallback，兼容 HTTP 环境
-    copyBtn.addEventListener('click', function() {
+    // Copy button — Clipboard API with execCommand fallback
+    copyBtn.addEventListener('click', async function() {
         const textToCopy = cronOutput.textContent;
-        
-        // 创建临时 textarea
-        const textArea = document.createElement('textarea');
-        textArea.value = textToCopy;
-        textArea.style.position = 'fixed';
-        textArea.style.left = '-999999px';
-        textArea.style.top = '-999999px';
-        textArea.style.opacity = '0';
-        document.body.appendChild(textArea);
-        
-        // 选中文本
-        textArea.focus();
-        textArea.select();
-        
+
         try {
-            const success = document.execCommand('copy');
-            if (success) {
+            await navigator.clipboard.writeText(textToCopy);
+            showCopySuccess();
+        } catch (err) {
+            // Fallback for older browsers
+            const textArea = document.createElement('textarea');
+            textArea.value = textToCopy;
+            textArea.style.position = 'fixed';
+            textArea.style.left = '-999999px';
+            textArea.style.top = '-999999px';
+            textArea.style.opacity = '0';
+            document.body.appendChild(textArea);
+            textArea.focus();
+            textArea.select();
+            try {
+                document.execCommand('copy');
                 showCopySuccess();
-            } else {
+            } catch (e) {
                 showCopyFail();
             }
-        } catch (err) {
-            showCopyFail();
+            document.body.removeChild(textArea);
         }
-        
-        document.body.removeChild(textArea);
     });
 
     function showCopySuccess() {
-        copyBtn.textContent = '✅ Copied!';
-        copyBtn.style.background = '#22c55e';
-        copyBtn.style.borderColor = '#22c55e';
-        copyBtn.style.color = '#fff';
+        copyBtn.classList.remove('copy-fail');
+        copyBtn.textContent = 'Copied!';
+        copyBtn.classList.add('copy-success');
         setTimeout(function() {
             copyBtn.textContent = 'Copy to Clipboard';
-            copyBtn.style.background = '';
-            copyBtn.style.borderColor = '';
-            copyBtn.style.color = '';
+            copyBtn.classList.remove('copy-success');
         }, 2000);
     }
 
     function showCopyFail() {
-        copyBtn.textContent = '❌ Failed';
+        copyBtn.classList.remove('copy-success');
+        copyBtn.textContent = 'Copy failed';
+        copyBtn.classList.add('copy-fail');
         setTimeout(function() {
             copyBtn.textContent = 'Copy to Clipboard';
+            copyBtn.classList.remove('copy-fail');
         }, 2000);
     }
 

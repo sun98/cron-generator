@@ -6,10 +6,13 @@
     <title>Cron Job Examples - Practical Use Cases</title>
     <meta name="description" content="Practical cron job examples for common tasks: backups, logs cleanup, reports generation.">
     <link rel="canonical" href="https://cron-generator.com/pages/cron-job-examples.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <header><nav><a href="/" class="logo">Cron Generator</a></nav></header>
+    <header><nav><a href="../index.html" class="logo">Cron Generator</a></nav></header>
     <main>
         <h1>Cron Job Examples</h1>
         
@@ -19,18 +22,22 @@
             <li><code>0 3 * * 0 /scripts/weekly-backup.sh</code> - Weekly Sunday backup</li>
         </ul>
         <h2>Cleanup Jobs</h2>
+        <ul>
             <li><code>0 4 * * * /scripts/cleanup-logs.sh</code> - Daily log cleanup</li>
             <li><code>0 0 * * * find /tmp -type f -mtime +7 -delete</code> - Delete old temp files</li>
+        </ul>
         <h2>Reports</h2>
+        <ul>
             <li><code>0 8 * * 1 /scripts/weekly-report.sh</code> - Weekly report every Monday</li>
             <li><code>0 9 1 * * /scripts/monthly-report.sh</code> - Monthly report on 1st</li>
-        <a href="/">← Back to Generator</a>
+        </ul>
+        <a href="../index.html">← Back to Generator</a>
         
         <div class="related-pages">
             <h3>Related Pages</h3>
             <div class="related-pages-list">
-                <a href="/pages/cron-expression-format.html">Cron Expression Format</a>
-                <a href="/pages/cron-not-working.html">Cron Not Working</a>
+                <a href="cron-expression-format.html">Cron Expression Format</a>
+                <a href="cron-not-working.html">Cron Not Working</a>
             </div>
         </div>
     </main>

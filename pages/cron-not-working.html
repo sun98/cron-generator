@@ -7,18 +7,22 @@
     <meta name="description" content="Cron job not running? Learn common reasons why cron fails and how to troubleshoot. Fix permission issues, path problems, and more.">
     <meta name="keywords" content="cron not working, cron job not running, troubleshoot cron, cron troubleshooting, cron debugging">
     <link rel="canonical" href="https://cron-generator.com/pages/cron-not-working.html">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    <header><nav><a href="/" class="logo">Cron Generator</a></nav></header>
+    <header><nav><a href="../index.html" class="logo">Cron Generator</a></nav></header>
     <main>
         <h1>Cron Not Working? Troubleshooting Guide</h1>
         <p>Your cron job isn't executing? Here are the most common reasons and solutions.</p>
-        
+
         <h2>🔍 Common Issues</h2>
         <h3>1. Missing Execute Permission</h3>
         <p>Your script needs executable permissions:</p>
         <pre><code>chmod +x /path/to/script.sh</code></pre>
+
         <h3>2. Wrong PATH</h3>
         <p>Cron has a minimal PATH. Use absolute paths:</p>
         <pre><code># Wrong
@@ -26,65 +30,85 @@
 
 # Correct
 * * * * * /usr/local/bin/script.sh</code></pre>
+
         <h3>3. Missing Shebang</h3>
         <p>Your script needs a proper shebang:</p>
         <pre><code>#!/bin/bash
 # Your code here</code></pre>
+
         <h3>4. Environment Variables</h3>
         <p>Cron doesn't load your .bashrc or .profile. Set variables explicitly:</p>
         <pre><code>* * * * * PATH=/usr/local/bin:/usr/bin /path/to/script.sh</code></pre>
+
         <h2>🧪 How to Debug</h2>
         <h3>Check Cron Logs</h3>
         <pre><code># Ubuntu/Debian
 tail -f /var/log/syslog | grep cron
+
 # CentOS/RHEL
 tail -f /var/log/cron
+
 # macOS
 log show --predicate 'process == "cron"' --last 1m</code></pre>
+
         <h3>Test Your Command Manually</h3>
         <pre><code># Run exactly what cron would run
 /bin/bash -c "your-command-here"
+
 # Or run the script directly
 /path/to/script.sh</code></pre>
+
         <h3>Redirect Output to Log</h3>
         <pre><code>* * * * * /path/to/script.sh >> /tmp/script.log 2>&1</code></pre>
+
         <h2>📋 Cron Service Status</h2>
         <h3>Check if Cron is Running</h3>
+        <pre><code># Ubuntu/Debian
 systemctl status cron
-# CentOS
+
+# CentOS/RHEL
 systemctl status crond
+
+# macOS
 sudo launchctl list | grep cron</code></pre>
+
         <h3>Restart Cron</h3>
-sudo systemctl restart cron
+        <pre><code>sudo systemctl restart cron
 sudo systemctl restart crond</code></pre>
+
         <h2>⚠️ Special Characters Gotchas</h2>
         <h3>Percent Sign (%)</h3>
-        <p>Use backslash to escape % in commands:</p>
+        <p>In cron, % has a special meaning (translates to newline). Escape it with backslash:</p>
+        <pre><code># Wrong
 * * * * * echo "Date is %Y-%m-%d" >> log.txt
-# Correct  
+
+# Correct
 * * * * * echo "Date is \%Y-\%m-\%d" >> log.txt</code></pre>
+
         <h3>Question Mark (?)</h3>
         <p>Some systems don't support ?. Use * instead:</p>
-        <pre><code># Use this instead of ?
+        <pre><code># Use * instead of ?
 * * * * *</code></pre>
+
         <h2>✅ Quick Checklist</h2>
         <ul>
-            <li>☑️ Cron service is running</li>
-            <li>☑️ Script has execute permission (chmod +x)</li>
-            <li>☑️ Using absolute paths</li>
-            <li>☑️ Script works when run manually</li>
-            <li>☑️ Output redirected to log file</li>
-            <li>☑️ Checked cron logs for errors</li>
+            <li>Cron service is running</li>
+            <li>Script has execute permission (chmod +x)</li>
+            <li>Using absolute paths</li>
+            <li>Script works when run manually</li>
+            <li>Output redirected to log file</li>
+            <li>Checked cron logs for errors</li>
         </ul>
+
         <div class="navigation">
-            <a href="/pages/crontab-syntax.html">← Back to Syntax</a>
-            <a href="/pages/cron-expression-format.html">Format Guide →</a>
+            <a href="crontab-syntax.html">← Back to Syntax</a>
+            <a href="cron-expression-format.html">Format Guide →</a>
         </div>
-        
+
         <div class="related-pages">
             <h3>Related Pages</h3>
             <div class="related-pages-list">
-                <a href="/pages/cron-job-examples.html">Cron Job Examples</a>
+                <a href="cron-job-examples.html">Cron Job Examples</a>
             </div>
         </div>
     </main>
