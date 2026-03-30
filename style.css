@@ -510,26 +510,6 @@ footer {
     margin-top: var(--space-2xl);
 }
 
-footer .footer-home {
-    margin-bottom: var(--space-md);
-}
-
-footer .footer-home a {
-    display: inline-block;
-    font-weight: 600;
-    font-size: var(--font-lg);
-    color: var(--color-primary);
-    text-decoration: none;
-    border-bottom: 2px solid var(--color-primary);
-    padding-bottom: 2px;
-    transition: color var(--transition-fast), border-color var(--transition-fast);
-}
-
-footer .footer-home a:hover {
-    color: var(--color-primary-hover);
-    border-bottom-color: var(--color-primary-hover);
-}
-
 /* ============================================
    Sub-pages Common Styles
    ============================================ */
