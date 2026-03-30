@@ -6,7 +6,7 @@
     <title>Cron Expression Generator - Free Online Cron Job Scheduler</title>
     <meta name="description" content="Free online cron expression generator. Create valid cron jobs with easy-to-use interface. Supports standard 5-field cron format. Preview next execution times instantly.">
     <meta name="keywords" content="cron expression, cron generator, cron job, crontab, cron scheduler, online cron">
-    <link rel="canonical" href="https://cron-generator.com/">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>

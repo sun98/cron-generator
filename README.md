@@ -18,7 +18,9 @@ No Vercel token is required in the repository; linking uses the Vercel ↔ GitHu
 
 ### Custom domain
 
-After deploy: Project → **Settings** → **Domains** → add your domain and follow DNS instructions.
+Production URL: **https://cron-generator.nibius.cn**
+
+In Vercel: Project → **Settings** → **Domains** → add `cron-generator.nibius.cn` (and optionally `www` if you use it). At your DNS provider (e.g. where `nibius.cn` is managed), add the **CNAME** or **A** records that Vercel shows—usually **CNAME** `cron-generator` → `cname.vercel-dns.com` (exact values are shown in the Vercel UI).
 
 ## Local preview
 

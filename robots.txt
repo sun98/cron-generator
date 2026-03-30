@@ -1,4 +1,4 @@
 User-Agent: *
 Allow: /
 
-Sitemap: https://cron-generator.com/sitemap.xml
+Sitemap: https://cron-generator.nibius.cn/sitemap.xml

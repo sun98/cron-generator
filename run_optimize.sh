@@ -25,7 +25,7 @@ case $CURRENT_ROUND in
     <meta charset="UTF-8">
     <title>Run Cron Every Minute - Cron Expression Examples</title>
     <meta name="description" content="Learn how to run a cron job every minute. Complete guide with examples and explanations.">
-    <link rel="canonical" href="https://cron-generator.com/pages/every-minute.html">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/pages/every-minute.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -66,7 +66,7 @@ EOF
     <meta charset="UTF-8">
     <title>Run Cron Every Hour - Cron Expression Examples</title>
     <meta name="description" content="Learn how to run a cron job every hour. Complete guide with examples.">
-    <link rel="canonical" href="https://cron-generator.com/pages/every-hour.html">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/pages/every-hour.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -109,7 +109,7 @@ EOF
     <meta charset="UTF-8">
     <title>Run Cron Every Day - Daily Cron Job</title>
     <meta name="description" content="Learn how to run a cron job every day at a specific time. Examples for midnight, morning, evening.">
-    <link rel="canonical" href="https://cron-generator.com/pages/every-day.html">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/pages/every-day.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -143,7 +143,7 @@ EOF
     <meta charset="UTF-8">
     <title>Run Cron Every Week - Weekly Cron Job</title>
     <meta name="description" content="Learn how to run a cron job every week on specific days.">
-    <link rel="canonical" href="https://cron-generator.com/pages/every-week.html">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/pages/every-week.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -175,7 +175,7 @@ EOF
     <meta charset="UTF-8">
     <title>Run Cron Every Month - Monthly Cron Job</title>
     <meta name="description" content="Learn how to run a cron job every month on a specific day.">
-    <link rel="canonical" href="https://cron-generator.com/pages/every-month.html">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/pages/every-month.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -202,32 +202,32 @@ EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://cron-generator.com/</loc>
+        <loc>https://cron-generator.nibius.cn/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-minute.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-minute.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-hour.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-hour.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-day.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-day.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-week.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-week.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-month.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-month.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -245,7 +245,7 @@ EOF
     <meta charset="UTF-8">
     <title>Cron Expression Format - Complete Guide</title>
     <meta name="description" content="Complete guide to cron expression format. Learn the 5 fields and their valid values.">
-    <link rel="canonical" href="https://cron-generator.com/pages/cron-expression-format.html">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/pages/cron-expression-format.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -288,7 +288,7 @@ EOF
     <meta charset="UTF-8">
     <title>Crontab Syntax - Examples and Tutorial</title>
     <meta name="description" content="Learn crontab syntax with practical examples. How to write crontab entries.">
-    <link rel="canonical" href="https://cron-generator.com/pages/crontab-syntax.html">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/pages/crontab-syntax.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -356,7 +356,7 @@ EOF
     <title>Cron Expression Generator - Free Online Cron Job Scheduler</title>
     <meta name="description" content="Free online cron expression generator. Create valid cron jobs with easy-to-use interface. Supports standard 5-field cron format. Preview next execution times instantly.">
     <meta name="keywords" content="cron expression, cron generator, cron job, crontab, cron scheduler, online cron">
-    <link rel="canonical" href="https://cron-generator.com/">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/">
     <link rel="stylesheet" href="style.css">
     <script type="application/ld+json">
     {
@@ -364,7 +364,7 @@ EOF
         "@type": "WebApplication",
         "name": "Cron Expression Generator",
         "description": "Free online cron expression generator with visual interface",
-        "url": "https://cron-generator.com/",
+        "url": "https://cron-generator.nibius.cn/",
         "applicationCategory": "DeveloperTools"
     }
     </script>
@@ -514,42 +514,42 @@ EOF
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://cron-generator.com/</loc>
+        <loc>https://cron-generator.nibius.cn/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-minute.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-minute.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-hour.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-hour.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-day.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-day.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-week.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-week.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-month.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-month.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/cron-expression-format.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/cron-expression-format.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/crontab-syntax.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/crontab-syntax.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -567,7 +567,7 @@ EOF
     <meta charset="UTF-8">
     <title>Cron Job Examples - Practical Use Cases</title>
     <meta name="description" content="Practical cron job examples for common tasks: backups, logs cleanup, reports generation.">
-    <link rel="canonical" href="https://cron-generator.com/pages/cron-job-examples.html">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/pages/cron-job-examples.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>

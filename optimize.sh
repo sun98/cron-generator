@@ -18,7 +18,7 @@ if [ "$1" = "1" ]; then
     <meta charset="UTF-8">
     <title>Run Cron Every Minute - Cron Expression Examples</title>
     <meta name="description" content="Learn how to run a cron job every minute. Complete guide with examples and explanations.">
-    <link rel="canonical" href="https://cron-generator.com/pages/every-minute.html">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/pages/every-minute.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -51,7 +51,7 @@ if [ "$1" = "2" ]; then
     <meta charset="UTF-8">
     <title>Run Cron Every Hour - Cron Expression Examples</title>
     <meta name="description" content="Learn how to run a cron job every hour. Complete guide with examples.">
-    <link rel="canonical" href="https://cron-generator.com/pages/every-hour.html">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/pages/every-hour.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -81,7 +81,7 @@ if [ "$1" = "3" ]; then
     <meta charset="UTF-8">
     <title>Run Cron Every Day - Daily Cron Job</title>
     <meta name="description" content="Learn how to run a cron job every day at a specific time.">
-    <link rel="canonical" href="https://cron-generator.com/pages/every-day.html">
+    <link rel="canonical" href="https://cron-generator.nibius.cn/pages/every-day.html">
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
@@ -104,22 +104,22 @@ if [ "$1" = "4" ]; then
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-        <loc>https://cron-generator.com/</loc>
+        <loc>https://cron-generator.nibius.cn/</loc>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-minute.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-minute.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-hour.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-hour.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://cron-generator.com/pages/every-day.html</loc>
+        <loc>https://cron-generator.nibius.cn/pages/every-day.html</loc>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
