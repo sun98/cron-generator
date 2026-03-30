@@ -696,15 +696,32 @@ main .examples li {
     color: var(--color-text-muted);
 }
 
+/* Subpage nav: [ prev | Home | next ] — sides flex so Home stays visually centered */
 main .navigation {
     display: flex;
-    justify-content: space-between;
+    flex-direction: row;
     align-items: center;
-    flex-wrap: wrap;
+    justify-content: space-between;
     gap: var(--space-md);
+    width: 100%;
     margin-top: var(--space-xl);
     padding-top: var(--space-lg);
     border-top: 1px solid var(--color-border);
+}
+
+main .navigation-side {
+    flex: 1 1 0;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+}
+
+main .navigation-side--left {
+    justify-content: flex-start;
+}
+
+main .navigation-side--right {
+    justify-content: flex-end;
 }
 
 main .navigation a {
@@ -730,6 +747,7 @@ main .navigation a:hover {
 }
 
 main .navigation a.navigation-home {
+    flex: 0 0 auto;
     background: var(--color-primary-light);
     color: var(--color-primary);
     border-color: var(--color-primary);
@@ -911,6 +929,20 @@ main .navigation a.navigation-home:hover {
 
     main .navigation {
         flex-direction: column;
+        align-items: stretch;
+    }
+
+    main .navigation-side {
+        flex: 0 0 auto;
+        justify-content: center;
+    }
+
+    main .navigation-side:not(:has(a)) {
+        display: none;
+    }
+
+    main .navigation-home {
+        order: -1;
     }
 
     main .highlight {
